@@ -19,3 +19,16 @@ puts ""
 jose = User.new("Jose", "jose@example.com", 36, "ambiguous", "cismale")
 jose.login
 jose.greet
+
+
+puts ""
+puts ""
+
+
+mazda3 = Car.new("Mazda", "3", "Put put put put")
+mazda3.rev_engine
+
+puts ""
+
+prius = Car.new("Toyota", "Prius", "...")
+prius.rev_engine
