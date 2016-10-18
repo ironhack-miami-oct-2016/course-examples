@@ -1,25 +1,21 @@
-# GOOD
-# class SuperUser
+# app.rb
 
-# BAD
-# class Super_User
-# class super_user
+require_relative("lib/user.rb")
+require_relative("lib/car.rb")
 
-  #    ------------------------------
-  #    |                            |
-class User                       #  |
-  def login                      #  |
-    puts "User is logging in"    #  |
-  end                            #  |
-                                 #  |
-  def greet                      #  |
-    puts "Hello"                 #  |
-  end                            #  |
-end                              #  |
-                                 #  |
-  #            ----------------------
-  #            |
-first_user = User.new
 
-first_user.login
-first_user.greet
+nizar = User.new("Nizar", "nizar@example.com", 30, "ambiguous", "cismale")
+  #           |     |            |               |      |
+  #          --     |      ------   --------------      |
+  #          |      |      |        |                   |
+  # def initialize(name, email,    age,              ethnicity, gender)
+
+nizar.login
+nizar.greet
+
+puts ""
+puts ""
+
+jose = User.new("Jose", "jose@example.com", 36, "ambiguous", "cismale")
+jose.login
+jose.greet
