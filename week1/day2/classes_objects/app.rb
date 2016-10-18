@@ -20,6 +20,15 @@ jose = User.new("Jose", "jose@example.com", 36, "ambiguous", "cismale")
 jose.login
 jose.greet
 
+puts ""
+puts "Our ages added together:"
+puts nizar.age + jose.age
+
+puts ""
+jose.age=(25)
+jose.greet
+
+
 
 puts ""
 puts ""

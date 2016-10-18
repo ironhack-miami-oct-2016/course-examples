@@ -12,4 +12,9 @@ class Car
     puts "#{@make} #{@model} goes:"
     puts @sound
   end
+
+
+  def self.blah
+    puts "blah blah"
+  end
 end
