@@ -15,6 +15,26 @@ white_rook_right = Rook.new(8, 1, "white")
 puts "Valid Rook movements"
 puts "--------------------"
 
+# 1,8   ----->   1,5
+# - x: no change
+# - y: decreasing by 3
+
+
+# 1,8   ----->   5,8
+# - x: increasing by 4
+# - y: no change
+
+
+# 8,1   ----->   8,3
+# - x: no change
+# - y: increasing by 2
+
+
+# 8,1   ----->   2,1
+# - x: decreasing by 6
+# - y: no change
+
+
 p black_rook_left.can_move?(1, 5) == "yes"
 p black_rook_left.can_move?(5, 8) == "yes"
 p white_rook_right.can_move?(8, 3) == "yes"
