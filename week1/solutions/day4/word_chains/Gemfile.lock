@@ -1,0 +1,13 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    ruby-dictionary (1.1.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  ruby-dictionary
+
+BUNDLED WITH
+   1.12.5
