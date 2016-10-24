@@ -20,7 +20,7 @@ class Board
 
   def board_can_move?(x, y, final_x, final_y)
     # Coordinates off the grid
-    if x > @pieces.length || y > @pieces.length ||
+    if       x > @pieces.length ||       y > @pieces.length ||
        final_x > @pieces.length || final_y > @pieces.length
       "no"
     else
