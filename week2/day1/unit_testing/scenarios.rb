@@ -1,4 +1,4 @@
-# app.rb
+# scenarios.rb
 
 the_calculator = StringCalculator.new
 
@@ -10,7 +10,10 @@ p the_calculator.add("3") == 3
 
 p the_calculator.add("") == 0
 
+# BONUS:
 p the_calculator.add == 0
+
+
 
 
 
