@@ -18,5 +18,11 @@ RSpec.describe FizzBuzzer do
       expect(my_fzbz.fizz_buzz(12)).to eq("Fizz")
       expect(my_fzbz.fizz_buzz(99)).to eq("Fizz")
     end
+
+    it "returns \"Buzz\" for multiples of 5" do
+      expect(my_fzbz.fizz_buzz(10)).to eq("Buzz")
+      expect(my_fzbz.fizz_buzz(25)).to eq("Buzz")
+      expect(my_fzbz.fizz_buzz(550)).to eq("Buzz")
+    end
   end
 end
