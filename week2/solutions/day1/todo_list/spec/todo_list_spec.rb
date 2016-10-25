@@ -28,6 +28,7 @@ RSpec.describe TodoList do
 
       expect( empty_list.tasks.length ).to eq(1)
       expect( empty_list.tasks ).to include(task1)
+      # expect(empty_list.tasks).to eq([task1])
     end
   end
 
@@ -37,6 +38,7 @@ RSpec.describe TodoList do
       list.delete_task(task2.id)
 
       expect( list.tasks ).not_to include(task2)
+      # expect( list.tasks ).to eq([task1, task3])
     end
   end
 
