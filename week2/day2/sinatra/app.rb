@@ -29,3 +29,10 @@ get "/about" do
     #          |
     #  views/about.erb
 end
+
+
+get "/best_pizza" do
+  @toppings = ["pepperonni", "sausage", "basil", "spinach", "tomatoes", "onions", "parmesan"]
+
+  erb(:best_pizza)
+end
