@@ -1,0 +1,33 @@
+<h1>Online Calculator</h1>
+
+<h2>Do math on some numbers</h2>
+
+<!-- post "/calculate" do -->
+<form method="post" action="/calculate">
+
+  <label>First Number:</label>
+  <input type="number" name="first_number">
+  <!-- params[:first_number] -->
+
+  <label>Second Number:</label>
+  <input type="number" name="second_number" value="<%= @memory_number %>">
+  <!-- params[:second_number] -->
+
+  <!-- params[:operation] -->
+  <button type="submit" name="operation" value="add">
+    Add
+  </button>
+
+  <button type="submit" name="operation" value="subtract">
+    Subtract
+  </button>
+
+  <button type="submit" name="operation" value="multiply">
+    Multiply
+  </button>
+
+  <button type="submit" name="operation" value="divide">
+    Divide
+  </button>
+
+</form>

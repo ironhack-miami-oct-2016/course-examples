@@ -1,0 +1,17 @@
+<h1>Online Calculator</h1>
+
+<h2>Result of calculation</h2>
+
+<p>
+  The result was
+  <strong><%= @result %></strong>.
+</p>
+
+
+<form method="post" action="/save_to_memory">
+  <input type="hidden" name="result" value="<%= @result %>">
+
+  <button>
+    Save this result for later
+  </button>
+</form>
