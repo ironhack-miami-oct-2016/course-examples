@@ -1,0 +1,30 @@
+<!-- views/best_pizza.erb -->
+
+<h1> Nizar's Site </h1>
+
+<h2> Nizar's Favorite Pizza </h2>
+
+<p> The ingredients for this awesome pizza are: </p>
+
+<img src="/pizza.gif">
+
+<ul>
+  <% @toppings.each do |my_topping| %>
+    <li> <%= my_topping %> </li>
+  <% end %>
+</ul>
+
+
+
+<!--
+
+<ul>
+  <li> pepperonni </li>
+  <li> sausage </li>
+  <li> basil </li>
+  <li> spinach </li>
+  <li> tomatoes </li>
+  <li> onions </li>
+</ul>
+
+-->

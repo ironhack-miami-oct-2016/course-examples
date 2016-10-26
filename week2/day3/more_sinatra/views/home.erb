@@ -1,0 +1,54 @@
+<!-- views/home.erb -->
+
+<h1> Nizar's Page </h1>
+<h2> Your page for learning to make pages. </h2>
+
+<p> Have you ever wanted to make Web application? Sure you have. </p>
+
+<% if @drank != nil %>
+  <p>
+    Your currently selected beverage is:
+    <strong> <%= @drank %> </strong>
+  </p>
+<% end %>
+
+<p> Discovery the Nizar experience: </p>
+
+<ul>
+  <li>
+    <a href="/"> Home </a>
+  </li>
+
+  <li>
+    <a href="/hi"> Hello </a>
+  </li>
+
+  <li>
+    <a href="/about"> About </a>
+  </li>
+
+  <li>
+    <a href="/best_pizza"> Favorite Pizza </a>
+  </li>
+</ul>
+
+
+<h3> Our users </h3>
+
+<ul>
+  <li>
+    <a href="/starwars"> Star Wars </a>
+  </li>
+
+  <li>
+    <a href="/KevinHart4real"> Kevin Hart </a>
+  </li>
+
+  <li>
+    <a href="/SirPatStew"> Patrick Stewart </a>
+  </li>
+
+  <li>
+    <a href="/celinedion"> Celine Dion </a>
+  </li>
+</ul>
