@@ -18,6 +18,10 @@ See [our `Gemfile`](Gemfile#5) for an example.
 
 
 ### Step 2 ###
+Run `bundle install`.
+
+
+### Step 3 ###
 Add `require "bundler/setup"` to the top of your `app.rb`.
 
 ```ruby
