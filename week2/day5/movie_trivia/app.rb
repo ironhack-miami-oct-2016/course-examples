@@ -1,3 +1,4 @@
+require "bundler/setup"
 require "sinatra"
 require "sinatra/reloader" if development?
 require "imdb"

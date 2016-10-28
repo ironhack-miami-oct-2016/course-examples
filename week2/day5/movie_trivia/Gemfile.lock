@@ -1,0 +1,43 @@
+GIT
+  remote: https://github.com/nickborbe/imdb.git
+  revision: d8e3895d4ffdfe6d482dc677754981568c7abeab
+  specs:
+    imdb (0.8.3)
+      nokogiri (= 1.6.5)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    backports (3.6.8)
+    mini_portile (0.6.2)
+    multi_json (1.12.1)
+    nokogiri (1.6.5)
+      mini_portile (~> 0.6.0)
+    rack (1.6.4)
+    rack-protection (1.5.3)
+      rack
+    rack-test (0.6.3)
+      rack (>= 1.0)
+    sinatra (1.4.7)
+      rack (~> 1.5)
+      rack-protection (~> 1.4)
+      tilt (>= 1.3, < 3)
+    sinatra-contrib (1.4.7)
+      backports (>= 2.0)
+      multi_json
+      rack-protection
+      rack-test
+      sinatra (~> 1.4.0)
+      tilt (>= 1.3, < 3)
+    tilt (2.0.5)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  imdb!
+  sinatra
+  sinatra-contrib
+
+BUNDLED WITH
+   1.12.5
