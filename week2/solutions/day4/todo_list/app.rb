@@ -1,5 +1,5 @@
 require "sinatra"
-require "sinatra/reloader"
+require "sinatra/reloader" if development?
 
 require_relative("lib/task.rb")
 require_relative("lib/todo_list.rb")
@@ -28,7 +28,7 @@ post "/create_task" do
 end
 
 
-get "/complete_task/:id" do
+post "/complete_task" do
   the_task = my_list.find_task_by_id( params[:id].to_i )
   the_task.complete!
 

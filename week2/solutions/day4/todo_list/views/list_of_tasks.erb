@@ -7,17 +7,18 @@
     <li>
       <%= the_task.content %>
 
-      <% if the_task.complete? %>
+      <% if the_task.complete? == false %>
+        <form method="post" action="/complete_task">
+          <input type="hidden" name="id" value="<%= the_task.id %>">
+          <button> Complete this task </button>
+        </form>
+      <% else %>
         DONE!
 
         <form method="post" action="/delete_task">
           <input type="hidden" name="id" value="<%= the_task.id %>">
           <button> Delete </button>
         </form>
-      <% else %>
-        <a href="/complete_task/<%= the_task.id %>">
-          Complete this task
-        </a>
       <% end %>
     </li>
   <% end %>
