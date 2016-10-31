@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Movie Trivia </title>
+
+        <link rel="stylesheet" href="/styles.css">
+    </head>
+    <body>
+        <h1> Movie Trivia </h1>
+
+        <p>
+            You searched for:
+            <strong><%= @title %></strong>.
+        </p>
+
+        <p>
+            There were
+            <strong><%= @results %></strong>
+            results matching that search term.
+        </p>
+
+        <h2>
+            Which of these films was released in
+            <em><%= @correct.year %></em>?
+        </h2>
+
+        <ul class="movie-list">
+            <% @movies.each do |movie| %>
+                <li>
+                    <% if movie.year == @correct.year %>
+                        <img src="<%= movie.poster %>"
+                             onclick="alert('Correct!')">
+                    <% else %>
+                        <img src="<%= movie.poster %>"
+                             onclick="alert('Wrong! Guess again!')">
+                    <% end %>
+                </li>
+            <% end %>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,16 @@
+body {
+    font-family: Baskerville;
+}
+
+.movie-list li {
+    list-style: none;
+    display: inline;
+}
+
+.movie-list img {
+    width: 400px;
+}
+
+.shadow-heading {
+  width: 25%;
+}
