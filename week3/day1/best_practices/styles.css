@@ -1,0 +1,27 @@
+ol {
+  font-size: 40px;
+}
+
+p {
+  font-size: 30px;
+  color: orange;
+  background-color: black;
+}
+
+a {
+  color: red;
+}
+
+
+/* CLASS SELECTOR */
+/* class="white-text" */
+
+.white-text {
+  font-size: 20px;
+  color: white;
+}
+
+
+#blue-text {
+  color: blue;
+}
