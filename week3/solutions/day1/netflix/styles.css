@@ -1,0 +1,136 @@
+/*------------------------------------------
+  ---------------- General -----------------
+  ------------------------------------------*/
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: url(fonts/ProximaNova-Reg.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: url(fonts/ProximaNova-Sbold.otf) format("opentype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: url(fonts/ProximaNova-Light.otf) format("opentype");
+  font-weight: lighter;
+}
+
+html,
+body {
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: black;
+  font-family: "Proxima Nova", sans-serif;
+
+  /* black footer space */
+  padding-bottom: 75px;
+}
+
+
+
+/*------------------------------------------
+  ----------------- Family -----------------
+  ------------------------------------------*/
+
+.family {
+  width: 100%;
+  /* padding for spacing matching the main box's margin top */
+  padding-bottom: 200px;
+
+  background-image: url(images/family.jpg);
+  background-size: cover;
+  background-position: center left;
+  color: white;
+}
+
+header {
+  /* header's a height compensates for its floats being out of the flow */
+  height: 100px;
+}
+
+.netflix-logo {
+  float: left;
+  margin-top: -20px;
+  margin-left: 20px;
+  width: 290px;
+}
+
+.sign-in {
+  float: right;
+  margin-top: 35px;
+  margin-right: 35px;
+  padding: 10px 55px;
+  background-color: #e52114;
+  color: white;
+  font-size: 28px;
+  text-decoration: none;
+}
+
+.action-wrapper {
+  /* margin top for spacing matching the family wrapper's padding bottom */
+  margin: 160px auto 0;
+
+  padding: 70px 50px;
+  width: 56%;
+  background-color: rgba(0,0,0,0.6);
+  text-align: center;
+}
+
+.action-wrapper h1 {
+  margin: 0 0 40px;
+  font-size: 68px;
+  text-align: left;
+}
+
+.action-wrapper a {
+  /* inline-block so that it's padding-top is respected by other tags */
+  display: inline-block;
+
+  padding: 15px 25px;
+  background-color: #419bf9;
+  color: white;
+  font-size: 28px;
+  text-decoration: none;
+}
+
+
+
+/*------------------------------------------
+  -------------- New Releases --------------
+  ------------------------------------------*/
+
+.new-releases {
+  padding: 75px;
+  background-color: white;
+}
+
+.new-releases h2 {
+  margin-top: 0;
+  font-size: 42px;
+}
+
+.new-releases ul {
+  margin-top: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.new-releases li {
+  display: inline;
+  margin-right: 60px;
+}
+
+.new-releases li:last-child {
+  margin-right: 0;
+}
+
+.new-releases img {
+  width: 200px;
+}
