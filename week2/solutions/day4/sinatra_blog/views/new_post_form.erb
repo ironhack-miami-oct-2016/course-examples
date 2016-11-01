@@ -1,0 +1,20 @@
+<h1> Sinatra Blog </h1>
+
+<h2> Create a new post </h2>
+
+<!-- post "/process_post" do -->
+<form method="post" action="/process_post">
+  <div>
+    <label> Title </label>
+    <input type="text" name="post_title">
+  </div>
+
+  <div>
+    <label> Text </label>
+    <textarea name="post_text"></textarea>
+  </div>
+
+  <button type="submit">
+    Submit
+  </button>
+</form>

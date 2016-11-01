@@ -1,0 +1,22 @@
+<h1> Sinatra Blog </h1>
+
+<h2> List of posts </h2>
+
+<ul>
+
+  <% @posts.each_with_index do |the_post, the_index| %>
+    <li>
+      <h3>
+        <a href="/post_details/<%= the_index %>"> <%= the_post.title %> </a>
+      </h3>
+
+      <time> <%= the_post.date %> </time>
+    </li>
+  <% end %>
+
+</ul>
+
+
+<a href="/new_post">
+  Create a new post
+</a>
