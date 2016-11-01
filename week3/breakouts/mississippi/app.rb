@@ -26,7 +26,7 @@ end
 
 post "/add_product" do
   if params[:agree_to_terms] == "on"
-    new_product = Product.new(params[:product_name], params[:product_price], params[:product_picture])
+    new_product = Product.new(params[:product_name], params[:product_price].to_i, params[:product_picture])
 
     products.push(new_product)
 
