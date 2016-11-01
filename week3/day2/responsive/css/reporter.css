@@ -1,0 +1,35 @@
+body:after {
+  /* Generally applied styles */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-weight: bold;
+  font-size: 300%;
+  color: #fff;
+
+  /* Extra small-only styles */
+  background-color: #aaa;
+  content: "Extra small screens (less than 768px)";
+}
+
+@media screen and (min-width: 768px) {
+  body:after {
+    background-color: #777;
+    content: "Small screens (768px - 992px)";
+  }
+}
+
+@media screen and (min-width: 992px) {
+  body:after {
+    background-color: #444;
+    content: "Medium screens (992px - 1200px)";
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  body:after {
+    background-color: #111;
+    content: "Large screens (1200px and greater)";
+  }
+}
