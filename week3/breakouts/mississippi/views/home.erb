@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="/styles.css">
+
+<h1> Mississippi </h1>
+
+<p> More American than Amazon. </p>
+
+<small> The West Coast is a different a different country, after all. </small>
+
+
+<ul>
+  <% @products_list.each do |a_product| %>
+    <li>
+      <h3> <%= a_product.name %> </h3>
+
+      <img src="<%= a_product.picture %>"
+        alt="Image of <%= a_product.name %>">
+
+      <p> $<%= a_product.price %> </p>
+    </li>
+  <% end %>
+</ul>
+
+
+<a href="/new_product">
+  Add a new product
+</a>

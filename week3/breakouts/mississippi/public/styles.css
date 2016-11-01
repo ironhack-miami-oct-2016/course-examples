@@ -1,0 +1,17 @@
+img {
+  width: 300px;
+}
+
+
+li {
+  border-bottom: 1px solid black;
+}
+
+
+.feedback {
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 20px;
+}
