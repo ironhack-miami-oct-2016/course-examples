@@ -1,0 +1,70 @@
+body,
+html,
+.pizza-header {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+.pizza-header {
+  /* styles for all versions */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  /* Specific to the extra small version */
+  background-image: url(https://media.giphy.com/media/qarmBuHtCSa8o/giphy.gif);
+  color: #01ff70;
+}
+
+h1 {
+  /* styles for all versions */
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+
+  /* Specific to the extra small version */
+  font-size: 30px;
+}
+
+
+@media screen and (min-width: 768px) {
+
+  .pizza-header {
+    background-image: url(https://media.giphy.com/media/3o7TKJG8p39T1hJFLO/giphy.gif);
+    color: #f012be;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+}
+
+@media screen and (min-width: 992px) {
+
+  .pizza-header {
+    background-image: url(https://media.giphy.com/media/ZH5o2lacOA8Te/giphy.gif);
+    color: #ff4136;
+  }
+
+  h1 {
+    font-size: 50px;
+  }
+
+}
+
+
+@media screen and (min-width: 1200px) {
+
+  .pizza-header {
+    background-image: url(https://media.giphy.com/media/ToMjGpBZbKrHwSlnRfO/giphy.gif);
+    color: #ff851b;
+  }
+
+  h1 {
+    font-size: 70px;
+  }
+
+}
