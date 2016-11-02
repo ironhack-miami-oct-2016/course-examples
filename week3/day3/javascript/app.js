@@ -5,6 +5,12 @@ var countCountriesFn = require("./lib/count-countries.js");
   //                           ./ lets node know that this is a local file
 
 
+var averageColonBlah = require("./lib/average-colon.js");
+
+console.log( averageColonBlah("80:70:90:100") === 85 );
+
+
+
 //  countries = ["Puerto Rico", "USA", "Nicaragua", "France", "Zimbabwe", "Mongolia", "Argentina", "Cuba", "Nigeria", "Haiti"]
 var countries = [
   "Puerto Rico", "Puerto Rico",
