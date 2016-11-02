@@ -1,5 +1,25 @@
+// require_relative("lib/country_counter.rb")
+var countCountriesFn = require("./lib/count-countries.js");
+  //                           ---
+  //                            |
+  //                           ./ lets node know that this is a local file
+
+
 //  countries = ["Puerto Rico", "USA", "Nicaragua", "France", "Zimbabwe", "Mongolia", "Argentina", "Cuba", "Nigeria", "Haiti"]
-var countries = ["Puerto Rico", "USA", "Nicaragua", "France", "Zimbabwe", "Mongolia", "Argentina", "Cuba", "Nigeria", "Haiti"];
+var countries = [
+  "Puerto Rico", "Puerto Rico",
+  "USA", "USA", "USA", "USA", "USA",
+  "Nicaragua", "France", "Zimbabwe", "Mongolia", "Argentina",
+  "Cuba", "Cuba", "Cuba", "Cuba",
+  "Nigeria", "Haiti"
+];
+
+
+console.log( countCountriesFn("USA", countries) === 5 );
+console.log( countCountriesFn("Puerto Rico", countries) === 2 );
+console.log( countCountriesFn("Cuba", countries) === 4 );
+console.log( countCountriesFn("Nicaragua", countries) === 1 );
+console.log( countCountriesFn("Japan", countries) === 0 );
 
 
 //     puts ""
