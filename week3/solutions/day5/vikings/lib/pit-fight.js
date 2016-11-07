@@ -30,18 +30,11 @@ class PitFight {
         // Switch the two vikings
         this.state.currentlyAttacking = beingAttacked;
         this.state.beingAttacked = attackingViking;
-        // Print Board
-        this.printStatus();
       } else {
         console.log("The match has ended");
         return;
       }
     }
-  }
-
-  printStatus () {
-    var attacking = this.state.currentlyAttacking;
-    var defending = this.state.beingAttacked;
   }
 }
 
