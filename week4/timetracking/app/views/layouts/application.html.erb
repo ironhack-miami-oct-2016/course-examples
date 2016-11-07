@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
     <title>Timetracking</title>
     <%= csrf_meta_tags %>
 
@@ -9,6 +10,22 @@
   </head>
 
   <body>
+    <header>
+      <h1>
+        <a href="/">
+          Tmtrckng
+        </a>
+      </h1>
+
+      <%= render "blah/navigation" %>
+      <!--                   |                 -->
+      <!-- app/views/blah/_navigation.html.erb -->
+    </header>
+
     <%= yield %>
+
+    <footer>
+      <p> Made with &hearts; at Ironhack. </p>
+    </footer>
   </body>
 </html>
