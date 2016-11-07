@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   get "/contact", to: "site#contact"
     # app/views/site/contact.html.erb
 
+  get "/say_name/:name", to: "site#say_name"
+
 
   get "/calculator", to: "calculator#add_form"
   post "/calculate", to: "calculator#process_addition"
