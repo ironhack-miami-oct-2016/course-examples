@@ -1,0 +1,18 @@
+<h2> Addition </h2>
+
+<form method="post" action="/calculate">
+  <div>
+    <label> First number: </label>
+    <input type="number" name="first_num">
+  </div>
+
+  <div>
+    <label> Second number:  </label>
+    <input type="number" name="second_num">
+  </div>
+
+  <input type="hidden" name="authenticity_token"
+      value="<%= form_authenticity_token %>">
+
+  <button> Add </button>
+</form>
