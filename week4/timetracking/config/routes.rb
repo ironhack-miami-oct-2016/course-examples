@@ -17,4 +17,6 @@ Rails.application.routes.draw do
   get "/calculator", to: "calculator#add_form"
   post "/calculate", to: "calculator#process_addition"
     # <form method="post" action="/calculate">
+
+  get "/projects", to: "projects#index"
 end

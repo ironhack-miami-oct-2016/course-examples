@@ -1,0 +1,13 @@
+<h2> List of projects </h2>
+
+<ul>
+  <% @projects.each do |one_project| %>
+    <li>
+      <%= one_project.name %>
+
+      <% if one_project.description.present? %>
+        - <%= one_project.description %>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
