@@ -1,0 +1,15 @@
+<h2> Inspect Your Text </h2>
+
+<form method="post" action="/text_inspections">
+  <div>
+    <label for="text_inspection_user_text">
+      Text
+    </label>
+    <textarea name="text_inspection[user_text]" id="text_inspection_user_text"></textarea>
+  </div>
+
+  <input type="hidden" name="authenticity_token"
+    value="<%= form_authenticity_token %>">
+
+  <button> Inspect </button>
+</form>

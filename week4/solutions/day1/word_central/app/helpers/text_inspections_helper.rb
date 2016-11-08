@@ -1,0 +1,2 @@
+module TextInspectionsHelper
+end

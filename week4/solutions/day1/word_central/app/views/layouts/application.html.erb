@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WordCentral</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <h1> <%= link_to "Wrd Cntrl", root_path %> </h1>
+
+      <ul>
+        <li> <%= link_to "Home", root_path %> </li>
+        <li> <%= link_to "Inspect Text", text_inspections_new_path %> </li>
+        <li> <%= link_to "Asciify Text", asciis_new_path %> </li>
+      </ul>
+    </header>
+
+    <%= yield %>
+
+    <footer>
+      <p> Made with &hearts; at Ironhack. </p>
+    </footer>
+  </body>
+</html>

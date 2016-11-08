@@ -1,0 +1,15 @@
+<h2> Asciify Your Text </h2>
+
+<form method="post" action="/asciis">
+  <div>
+    <label for="ascii_text">
+      Text
+    </label>
+    <textarea name="ascii[text]" id="ascii_text"></textarea>
+  </div>
+
+  <input type="hidden" name="authenticity_token"
+    value="<%= form_authenticity_token %>">
+
+  <button> Asciify </button>
+</form>

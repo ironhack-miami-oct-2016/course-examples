@@ -1,0 +1,34 @@
+<h2> Inspection Results </h2>
+
+<p> Submitted text: </p>
+
+<blockquote> <%= @text %> </blockquote>
+
+<p>
+  Your text has roughly
+  <strong> <%= @word_count %> </strong>
+  words in it.
+</p>
+
+<p>
+  It would take the average person
+  <strong> <%= @estimated_seconds.round(1) %> seconds </strong>
+  to read through it.
+</p>
+
+
+<h3> Top 10 most used words </h3>
+
+<ol>
+  <% @top_ten_words.each do |mini_word_array| %>
+    <li>
+      <!-- Word -->
+      <strong> <%= mini_word_array[0] %> </strong>
+
+      <!-- Count -->
+      - <%= mini_word_array[1] %>
+    </li>
+  <% end %>
+</ol>
+
+<%= link_to "Inspect some more text", text_inspections_new_path %>
