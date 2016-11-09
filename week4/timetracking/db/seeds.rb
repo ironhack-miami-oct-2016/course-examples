@@ -17,3 +17,19 @@ projectG = Project.create!(name: "luckye.gg")
 projectH = Project.create!(name: "wat.co")
 projectI = Project.create!(name: "Tabtervention", description: "Chrome Plugin that removes old tabs.")
 projectJ = Project.create!(name: "Q Bot", description: "Slack bot that queues you up.")
+
+
+# The following 3 lines are equivalent
+TimeEntry.create!(hours: 2, minutes: 30, comments: "blah", date: Date.today, project_id: projectA.id)
+TimeEntry.create!(hours: 2, minutes: 30, comments: "blah", date: Date.today, project: projectA)
+                                                               # belongs_to :project
+
+     projectA.time_entries.create!(hours: 2, minutes: 30, comments: "blah", date: Date.today)
+  # has_many :time_entries
+
+
+
+# Papa Johns time entries
+projectC.time_entries.create!(hours: 3, minutes: 45, comments: "Papa Johns stuff", date: Date.today)
+projectC.time_entries.create!(hours: 6, minutes: 45, comments: "Papa Johns app", date: Date.today - 3.days)
+projectC.time_entries.create!(hours: 1, minutes: 0, comments: "Papa Johns research", date: Date.today - 5.days)
