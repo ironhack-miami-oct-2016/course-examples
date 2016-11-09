@@ -3,7 +3,12 @@
 <ul>
   <% @projects.each do |one_project| %>
     <li>
-      <%= one_project.name %>
+      <%= link_to one_project.name, project_path(one_project) %>
+        <!--
+          <a href="/projects/7777">
+            Papa John's Virtual Pizza
+          </a>
+        -->
 
       <% if one_project.description.present? %>
         - <%= one_project.description %>
