@@ -19,6 +19,8 @@ Rails.application.routes.draw do
     # <form method="post" action="/calculate">
 
   get "/projects", to: "projects#index"
+
+  get "/projects/new", to: "projects#new"
     #                                            project_path
     #                                               |
   get "/projects/:id", to: "projects#show", as: "project"
