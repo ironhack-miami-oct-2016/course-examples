@@ -1,0 +1,30 @@
+.navbar > .container-fluid .navbar-brand {
+  margin-left: 100px;
+}
+
+.announcement {
+  background-color: #0275d8;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
+header ul {
+  list-style: none;
+  padding-left: 0;
+  padding: 15px;
+}
+
+.main-link {
+  font-size: 20px;
+}
+
+header li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+header a {
+  color: #563d7c;
+}
