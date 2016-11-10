@@ -1,0 +1,2 @@
+class Pie < ApplicationRecord
+end

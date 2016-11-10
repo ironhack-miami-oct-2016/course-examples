@@ -1,0 +1,11 @@
+<h1> Pies App </h1>
+
+<h2> List of pies </h2>
+
+<ul>
+  <% @pies.each do |a_pie| %>
+    <li> <%= a_pie.flavor %> - $<%= a_pie.price %> </li>
+  <% end %>
+</ul>
+
+<%= link_to "Add a new pie", pies_new_path %>

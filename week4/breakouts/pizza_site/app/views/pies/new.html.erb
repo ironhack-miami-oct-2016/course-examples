@@ -1,0 +1,22 @@
+<h1> Pies App </h1>
+
+<h2> Create a new pie </h2>
+
+<%= form_for @the_pie do |f| %>
+  <div>
+    <%= f.label :flavor %>
+    <%= f.text_field :flavor %>
+  </div>
+
+  <div>
+    <%= f.label :price %>
+    <%= f.number_field :price %>
+  </div>
+
+  <div>
+    <%= f.label :size %>
+    <%= f.text_field :size %>
+  </div>
+
+  <%= f.button %>
+<% end %>
