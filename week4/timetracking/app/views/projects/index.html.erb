@@ -13,6 +13,8 @@
       <% if one_project.description.present? %>
         - <%= one_project.description %>
       <% end %>
+
+      <%= link_to("See time entries", project_time_entries_path(one_project)) %>
     </li>
   <% end %>
 </ul>

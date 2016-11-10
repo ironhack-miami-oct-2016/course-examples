@@ -9,3 +9,5 @@
   <li> Created: <%= @my_project.created_at %> </li>
   <li> Updated: <%= @my_project.updated_at %> </li>
 </ul>
+
+<%= link_to("See time entries", project_time_entries_path(@my_project)) %>

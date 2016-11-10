@@ -28,8 +28,15 @@ TimeEntry.create!(hours: 2, minutes: 30, comments: "blah", date: Date.today, pro
   # has_many :time_entries
 
 
-
 # Papa Johns time entries
 projectC.time_entries.create!(hours: 3, minutes: 45, comments: "Papa Johns stuff", date: Date.today)
 projectC.time_entries.create!(hours: 6, minutes: 45, comments: "Papa Johns app", date: Date.today - 3.days)
 projectC.time_entries.create!(hours: 1, minutes: 0, comments: "Papa Johns research", date: Date.today - 5.days)
+
+
+# Dota 2 time entries
+projectD.time_entries.create!(hours: 4, minutes: 15, comments: "Added heroes", date: Date.today - 4.days)
+
+
+# Q bot time entries
+projectJ.time_entries.create!(hours: 2, minutes: 0, comments: "Review", date: Date.today - 2.days)
