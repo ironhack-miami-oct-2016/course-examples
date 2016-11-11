@@ -1,0 +1,33 @@
+
+<% if @my_entry.errors.any? %>
+  <ul>
+      <% @my_entry.errors.full_messages.each do |error_message| %>
+        <li> <%= error_message %> </li>
+      <% end %>
+  </ul>
+<% end %>
+
+
+<%= form_for [@my_project, @my_entry] do |f| %>
+  <div>
+    <%= f.label :hours %>
+    <%= f.number_field :hours %>
+  </div>
+
+  <div>
+    <%= f.label :minutes %>
+    <%= f.number_field :minutes %>
+  </div>
+
+  <div>
+    <%= f.label :date %>
+    <%= f.date_field :date %>
+  </div>
+
+  <div>
+    <%= f.label :comments %>
+    <%= f.text_area :comments %>
+  </div>
+
+  <%= f.button %>
+<% end %>

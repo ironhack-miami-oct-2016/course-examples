@@ -8,6 +8,13 @@
       <%= one_entry.hours %> h
       <%= one_entry.minutes %> m -
       <%= one_entry.date %>
+
+      <%= link_to "Edit", edit_project_time_entry_path(@my_project, one_entry) %>
+      <%#= link_to "Edit", "/projects/#{@my_project.id}/time_entries/#{one_entry.id}/edit" %>
+
+      <%= link_to "Delete", project_time_entry_path(@my_project, one_entry), method: "delete", data: { confirm: "Are you sure?" } %>
     </li>
   <% end %>
 </ul>
+
+<%= link_to "Add a new time entry", new_project_time_entry_path(@my_project) %>
