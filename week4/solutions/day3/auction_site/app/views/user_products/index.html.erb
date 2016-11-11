@@ -1,0 +1,24 @@
+<h2>
+  Products for auction from
+
+  <em>
+    <%= link_to(@the_user.email, user_path(@the_user)) %>
+  </em>
+</h2>
+
+<ul>
+  <% @the_user.products.each do |the_product| %>
+    <li>
+      <h3>
+        <%= link_to(the_product.title, product_path(the_product)) %>
+      </h3>
+
+      <p>
+        Auction ends:
+        <time> <%= the_product.deadline %> </time>
+      </p>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to("Add a product for this user", new_user_product_path(@the_user)) %>

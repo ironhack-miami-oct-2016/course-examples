@@ -1,0 +1,23 @@
+<h2> User profile </h2>
+
+<ul>
+  <li>
+    Name:
+    <strong> <%= @the_user.name %> </strong>
+  </li>
+
+  <li>
+    Email:
+    <strong> <%= @the_user.email %> </strong>
+  </li>
+</ul>
+
+<nav>
+  <div>
+    <%= link_to("See this user's products", user_products_path(@the_user)) %>
+  </div>
+
+  <div>
+    <%= link_to("Add a product for this user", new_user_product_path(@the_user)) %>
+  </div>
+</nav>

@@ -1,0 +1,33 @@
+<h2>
+  Add a new product for
+  <em> <%= @the_user.email %> </em>
+</h2>
+
+<% if @the_product.errors.any? %>
+  <ul>
+    <% @the_product.errors.full_messages.each do |error_message| %>
+      <li> <%= error_message %> </li>
+    <% end %>
+  </ul>
+<% end %>
+
+
+<%= form_for [@the_user, @the_product] do |f| %>
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div>
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+
+  <div>
+    <%= f.label :deadline %>
+    <%= f.date_field :deadline %>
+  </div>
+
+  <%= f.button %>
+<% end %>
+

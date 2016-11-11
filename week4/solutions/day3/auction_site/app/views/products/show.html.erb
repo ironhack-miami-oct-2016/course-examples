@@ -1,0 +1,52 @@
+<h2> <%= @the_product.title %> </h2>
+
+<p> <%= @the_product.description %> </p>
+
+<p>
+  Sold by
+  <em>
+    <%= link_to(@the_product.user.email, user_path(@the_product.user)) %>
+  </em>
+</p>
+
+<p>
+  This auction ends on
+  <time> <%= @the_product.deadline %> </time>
+</p>
+
+
+<h3> Make a bid </h3>
+
+<% if @the_bid.errors.any? %>
+  <ul>
+    <% @the_bid.errors.full_messages.each do |error_message| %>
+      <li> <%= error_message %> </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_for [@the_product, @the_bid] do |f| %>
+  <div>
+    <%= f.label :amount %>
+    <%= f.number_field :amount %>
+  </div>
+
+  <div>
+    <%= f.label :user_email %>
+    <%= f.email_field :user_email %>
+  </div>
+
+  <%= f.button %>
+<% end %>
+
+
+<h3> Current Bids </h3>
+
+<ul>
+  <% @current_bids.each do |one_bid| %>
+    <li>
+      <strong> $<%= one_bid.amount %> </strong>
+      by <em> <%= one_bid.user.email %> </em>
+    </li>
+  <% end %>
+</ul>

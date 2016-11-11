@@ -1,0 +1,23 @@
+<h2> All products for auction </h2>
+
+<ul>
+  <% @products_array.each do |the_product| %>
+    <li>
+      <h3>
+        <%= link_to(the_product.title, product_path(the_product)) %>
+      </h3>
+
+      <p>
+        Sold by
+        <em>
+          <%= link_to(the_product.user.email, user_path(the_product.user)) %>
+        </em>
+      </p>
+
+      <p>
+        Auction ends:
+        <time> <%= the_product.deadline %> </time>
+      </p>
+    </li>
+  <% end %>
+</ul>
