@@ -1,26 +1,38 @@
 console.log("CONSOLE LOG");
 
+
 $(document).ready(function () {
 
-
-  $(".js-button-thing").on("click", function () {
-    $("body").append(`<img src="images/unicorn1.gif">`);
+  $(".js-pizza").on("click", function () {
+    $(".js-small").append("PIZZA 🍕 PIZZA");
   });
 
-
-  $(".js-change-button-color").on("click", function () {
-    $(".js-button-thing").addClass("btn");
-
-    if ($(".js-button-thing").hasClass("btn-info")) {
-      $(".js-button-thing").addClass("btn-danger");
-      $(".js-button-thing").removeClass("btn-info");
-    }
-
-    else {
-      $(".js-button-thing").addClass("btn-info");
-      $(".js-button-thing").removeClass("btn-danger");
-    }
+  $(".empanadas").click(function () {
+    $(".js-heading").append(`
+      <span> EMPANADA TIME 😋 </span>
+      <a href="#"> SEE MORE EMPANADAS </a>
+    `);
   });
 
+  $("#cookies").on("click", cookieMessage);
 
 });
+
+
+
+function cookieMessage () {
+  var cookieContent = `
+    <div class="popup">
+      <h2> 🍪 Have some cookies. 🍪 </h2>
+
+      <p> Cookies are good for you. Here's why: </p>
+
+      <ul>
+        <li> Cookies taste good. </li>
+        <li> They have 0 calories. </li>
+        <li> Cookies don't lie to you. </li>
+      </ul>
+    </div>`;
+
+  $("body").append(cookieContent);
+}
