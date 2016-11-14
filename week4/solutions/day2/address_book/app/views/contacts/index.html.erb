@@ -1,0 +1,14 @@
+<h2> List of contacts </h2>
+
+<ul>
+  <% @contacts.each do |the_contact| %>
+    <li>
+      <%= the_contact.name %>
+      - <%= the_contact.email_address %>
+    </li>
+  <% end %>
+</ul>
+
+<a href="/contacts/new">
+  Add a new contact
+</a>

@@ -1,0 +1,28 @@
+<h2>Add a new contact</h2>
+
+<form method="post" action="/contacts">
+  <div>
+    <label for="contact_name">Name</label>
+    <input type="text" name="contact[name]" id="contact_name" required>
+  </div>
+
+  <div>
+    <label for="contact_address">Address</label>
+    <textarea name="contact[address]" id="contact_address" required></textarea>
+  </div>
+
+  <div>
+    <label for="contact_phone">Phone number</label>
+    <input type="tel" name="contact[phone_number]" id="contact_phone">
+  </div>
+
+  <div>
+    <label for="contact_email">Email</label>
+    <input type="email" name="contact[email_address]" id="contact_email">
+  </div>
+
+
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+  <button type="submit">Add this contact</button>
+</form>
