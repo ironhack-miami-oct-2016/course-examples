@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>PizzaParlor</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <h1> Pzz Prlr </h1>
+
+      <ul>
+        <li> <%= link_to "Home", root_path %> </li>
+        <li> <%= link_to "New Order", new_order_path %> </li>
+      </ul>
+    </header>
+
+    <%= yield %>
+
+    <footer>
+      <p> Made with &hearts; at Ironhack. </p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<h2> Order details page </h2>
+
+<p>
+  Order for user:
+  <b> <%= @order.name %> </b>
+</p>
+
+
+<%= form_for [@order, @pizza] do |f| %>
+  <%= f.label :size %>
+  <%= f.text_field :size %>
+
+  <%= f.label :price %>
+  <%= f.number_field :price %>
+
+  <%= f.button %>
+<% end %>
+
+
+<ul>
+  <% @order.pizzas.each do |pizza| %>
+    <li>
+      <%= link_to pizza_path(pizza) do %>
+        <%= pizza.size %>
+        - $<%= pizza.price %>
+      <% end %>
+    </li>
+  <% end %>
+</ul>

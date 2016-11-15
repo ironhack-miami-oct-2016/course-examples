@@ -1,0 +1,8 @@
+<h2> Create a new Order </h2>
+
+<%= form_for @order do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.button %>
+<% end %>

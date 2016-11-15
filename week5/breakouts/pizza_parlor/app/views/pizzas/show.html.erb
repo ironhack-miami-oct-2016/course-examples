@@ -1,0 +1,23 @@
+<h2> Pizza details page </h2>
+
+<p> Size: <%= @pizza.size %> </p>
+
+<p> Price: <%= @pizza.price %> </p>
+
+
+<%= link_to "Back to order", order_path(@pizza.order) %>
+
+
+<%= form_for [@pizza, @topping] do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.button %>
+<% end %>
+
+
+<ul>
+  <% @pizza.toppings.each do |topping| %>
+    <li> <%= topping.name %> </li>
+  <% end %>
+</ul>
