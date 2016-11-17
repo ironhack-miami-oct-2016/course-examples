@@ -36,6 +36,19 @@ PokemonApp.showPokemonModal = function (apiResult) {
   $(".js-pkmn-number").text(`#${apiResult.pkdx_id}`);
   $(".js-pkmn-height").text(apiResult.height);
   $(".js-pkmn-weight").text(apiResult.weight);
+  $(".js-pkmn-hp").text(apiResult.hp);
+  $(".js-pkmn-attack").text(apiResult.attack);
+  $(".js-pkmn-defense").text(apiResult.defense);
+  $(".js-pkmn-sp-attack").text(apiResult.sp_atk);
+  $(".js-pkmn-sp-defense").text(apiResult.sp_def);
+  $(".js-pkmn-speed").text(apiResult.speed);
+
+  $(".js-pkmn-types").empty();
+  apiResult.types.forEach(function (theType) {
+    var typeHtml = `<li> ${theType.name} </li>`;
+
+    $(".js-pkmn-types").append(typeHtml);
+  });
 
   $(".js-pokemon-modal").modal("show");
 };
