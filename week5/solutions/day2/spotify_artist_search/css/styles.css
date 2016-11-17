@@ -1,0 +1,35 @@
+.artist-list {
+  list-style: none;
+}
+
+.artist-list > li {
+  float: left;
+  margin-left: 3px;
+}
+
+.artist-image {
+  width: 250px;
+  height: 250px;
+}
+
+.albums-btn {
+  display: block;
+}
+
+
+.album-list {
+  list-style: none;
+  overflow: auto;
+}
+
+.album-list > li {
+  float: left;
+  margin-left: 3px;
+  border: 1px solid black;
+  width: 150px;
+}
+
+.album-image {
+  width: 150px;
+  height: 150px;
+}
