@@ -2,7 +2,6 @@ $(document).ready(function() {
 
   $(".js-artist-form").on("submit", fetchSpotifyArtists);
 
-
     //  EVENT DELEGATION!
     //  -----------------
     //
@@ -73,7 +72,15 @@ function handleError (theError) {
 
 
 function fetchSpotifyAlbums () {
-  // data-blah="..."
+
+  // <button class="albums-btn js-artist-albums" data-blah="4x1nvY2FN8jxqAFA0DA02H">
+  //   Show albums for John Lennon
+  // </button>
+
+  console.log( "$(this).data(\"blah\")",  $(this).data("blah") );
+
+    // <button           data-blah="..."
+    //                     |    |
   var artistId = $(this).data("blah");
 
   $.ajax({
