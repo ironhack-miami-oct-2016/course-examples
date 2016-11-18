@@ -1,0 +1,107 @@
+<h1>Pokédex</h1>
+
+<!-- List of pokemon -->
+<ul class="pokedex-list">
+  <% @pokemon.each do |pkmn| %>
+    <li>
+      <button class="js-show-pokemon btn btn-link"
+          data-pokemon-uri="<%= pkmn["resource_uri"] %>">
+        <%= pkmn["name"] %>
+      </button>
+    </li>
+  <% end %>
+</ul>
+
+
+
+<!-- Pokemon modal view (hidden at first) -->
+<div class="modal fade js-pokemon-modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <button class="close" data-dismiss="modal">
+          <span>&times;</span>
+        </button>
+
+        <h3 class="modal-title">
+          <span class="js-pkmn-name">Feraligtr</span>
+          <small class="js-pkmn-number">#160</small>
+        </h3>
+      </div><!-- .modal-header -->
+
+      <div class="modal-body">
+        <div class="pokemon-top-info clearfix">
+          <!-- Wrapper for the sprite <img> tag -->
+          <div class="sprite-wrapper js-sprite-wrapper"></div>
+
+          <!-- Empty paragraph for description -->
+          <p class="pokemon-description js-description-tag"></p>
+        </div>
+
+        <dl class="dl-horizontal">
+          <dt>Height</dt>
+          <dd class="js-pkmn-height">23</dd>
+
+          <dt>Weight</dt>
+          <dd class="js-pkmn-weight">888</dd>
+
+          <dt>HP</dt>
+          <dd class="js-pkmn-hp"></dd>
+
+          <dt>Attack</dt>
+          <dd class="js-pkmn-attack"></dd>
+
+          <dt>Defense</dt>
+          <dd class="js-pkmn-defense"></dd>
+
+          <dt>Special Attack</dt>
+          <dd class="js-pkmn-sp-attack"></dd>
+
+          <dt>Special Defense</dt>
+          <dd class="js-pkmn-sp-defense"></dd>
+
+          <dt>Speed</dt>
+          <dd class="js-pkmn-speed"></dd>
+
+          <dt>Types</dt>
+          <dd>
+            <ul class="list-unstyled js-pkmn-types"></ul>
+          </dd>
+        </dl>
+      </div><!-- .modal-body -->
+
+      <div class="modal-footer js-evolutions-start-ui">
+        <button class="btn btn-primary js-evolutions-btn">
+          See evolutions
+        </button>
+      </div><!-- .modal-footer -->
+
+    </div><!-- .modal-content -->
+  </div><!-- .modal-dialog -->
+</div><!-- .modal -->
+
+
+
+<!-- Evolutions modal view (hidden at first) -->
+<div class="modal fade evolutions js-evolutions-modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <button class="close" data-dismiss="modal">
+          <span>&times;</span>
+        </button>
+
+        <h3 class="modal-title">
+          Evolutions
+        </h3>
+      </div><!-- .modal-header -->
+
+      <div class="modal-body evolution-list-wrapper">
+        <ul class="list-inline js-evolutions-list"></ul>
+      </div><!-- .modal-body -->
+
+    </div><!-- .modal-content -->
+  </div><!-- .modal-dialog -->
+</div><!-- .modal -->
