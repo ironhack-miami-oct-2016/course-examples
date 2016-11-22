@@ -5,3 +5,31 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+sandwichA = Sandwich.create!(name: "Croqueta Preparada", bread_type: "Puerto Rican Bread")
+
+
+ingredientA = Ingredient.create!(name: "croquetas", calories: 175)
+ingredientB = Ingredient.create!(name: "swiss cheese", calories: 50)
+ingredientC = Ingredient.create!(name: "ham", calories: 100)
+
+
+SandwichIngredient.create!(sandwich_id: sandwichA.id, ingredient_id: ingredientA.id)
+SandwichIngredient.create!(sandwich_id: sandwichA.id, ingredient_id: ingredientB.id)
+SandwichIngredient.create!(sandwich_id: sandwichA.id, ingredient_id: ingredientC.id)
+
+
+# SandwichIngredient.create!(sandwich: sandwichA, ingredient: ingredientA)
+# SandwichIngredient.create!(sandwich: sandwichA, ingredient: ingredientB)
+# SandwichIngredient.create!(sandwich: sandwichA, ingredient: ingredientC)
+
+
+# sandwichA.ingredients.push(ingredientA)
+# sandwichA.ingredients.push(ingredientB)
+# sandwichA.ingredients.push(ingredientC)
+
+
+# ingredientA.sandwiches.push(sandwichA)
+# ingredientB.sandwiches.push(sandwichA)
+# ingredientC.sandwiches.push(sandwichA)
