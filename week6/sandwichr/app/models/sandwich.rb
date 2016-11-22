@@ -1,0 +1,2 @@
+class Sandwich < ApplicationRecord
+end
