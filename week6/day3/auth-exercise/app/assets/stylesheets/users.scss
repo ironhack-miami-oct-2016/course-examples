@@ -1,0 +1,17 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.login-success {
+  border-radius: 3px;
+  padding: 20px;
+  background-color: lightgreen;
+  color: #333;
+}
+
+.admin-only {
+  border-radius: 3px;
+  padding: 20px;
+  background-color: red;
+  color: white;
+}
