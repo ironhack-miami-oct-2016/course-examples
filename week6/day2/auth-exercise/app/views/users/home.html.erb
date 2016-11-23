@@ -1,0 +1,10 @@
+<h1>Hello, <%= @name %>!</h1>
+
+<% if session[:user_id] %>
+  <%= link_to "My profile", "/profile" %><br>
+  <%= link_to "All profiles", "/users" %><br>
+  <%= link_to "Logout", "/logout", method: "delete" %><br>
+<% else %>
+  <%= link_to "Sign up", "/signup" %><br>
+  <%= link_to "Login", "/login" %><br>
+<% end %>
