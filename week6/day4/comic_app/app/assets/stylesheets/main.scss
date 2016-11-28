@@ -1,0 +1,17 @@
+// Place all the styles related to the main controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.notice {
+  background-color: lightgreen;
+  color: #333;
+  border-radius: 3px;
+  padding: 15px;
+}
+
+.alert {
+  background-color: red;
+  color: white;
+  border-radius: 3px;
+  padding: 15px;
+}
