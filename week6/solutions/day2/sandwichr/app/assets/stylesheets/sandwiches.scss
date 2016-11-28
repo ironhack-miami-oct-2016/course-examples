@@ -1,0 +1,23 @@
+// Place all the styles related to the sandwiches controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+li {
+  display: inline-block;
+}
+
+.sandwich-ingredients li {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+
+.add-ingredients-wrapper {
+  margin-top: 50px;
+}

@@ -1,0 +1,9 @@
+<h2> List of sandwiches </h2>
+
+<ul>
+  <% @sandwiches_list.each do |one_sandwich| %>
+    <li>
+      <%= link_to(one_sandwich.name, sandwich_path(one_sandwich)) %>
+    </li>
+  <% end %>
+</ul>

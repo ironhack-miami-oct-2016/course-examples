@@ -1,0 +1,41 @@
+<h2> Sandwich details </h2>
+
+<h3> <%= @the_sandwich.name %> </h3>
+
+<p>
+  Bread Type:
+  <strong> <%= @the_sandwich.bread_type %> </strong>
+</p>
+
+<p>
+  Total Calories:
+  <strong> <%= @the_sandwich.total_calories %> </strong>
+</p>
+
+
+<ul class="sandwich-ingredients">
+  <% @sandwich_ingredients_list.each do |one_ingredient| %>
+    <li>
+      <h4> <%= one_ingredient.name %> </h4>
+      <p>
+        Calories:
+        <em> <%= one_ingredient.calories %> </em>
+      </p>
+    </li>
+  <% end %>
+</ul>
+
+
+<section class="add-ingredients-wrapper">
+  <h2> Add more ingredients </h2>
+
+  <ul>
+    <% @all_ingredients.each do |an_ingredient| %>
+      <li>
+        <button data-ingredient-id="<%= an_ingredient.id %>">
+          <%= an_ingredient.name %>
+        </buton>
+      </li>
+    <% end %>
+  </ul>
+</section>
