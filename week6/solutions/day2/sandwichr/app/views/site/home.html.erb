@@ -1,3 +1,7 @@
 <p> Your stop for creating sandwiches (but not eating them. hah.) </p>
 
-<%= link_to "See our sandwiches", sandwiches_path %>
+<% if user_signed_in? %>
+  <%= link_to "See our sandwiches", sandwiches_path %>
+<% else %>
+  <%= link_to "Sign up to see our sandwiches", new_user_registration_path %>
+<% end %>

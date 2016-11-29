@@ -1,6 +1,8 @@
 <h2> Sandwich details </h2>
 
-<h3> <%= @the_sandwich.name %> </h3>
+<h3 class="js-sandwich-id-tag" data-sandwich-id="<%= @the_sandwich.id %>">
+  <%= @the_sandwich.name %>
+</h3>
 
 <p>
   Bread Type:
@@ -9,11 +11,11 @@
 
 <p>
   Total Calories:
-  <strong> <%= @the_sandwich.total_calories %> </strong>
+  <strong class="js-total-calories-tag"> <%= @the_sandwich.total_calories %> </strong>
 </p>
 
 
-<ul class="sandwich-ingredients">
+<ul class="sandwich-ingredients js-sandwich-ingredients-tag">
   <% @sandwich_ingredients_list.each do |one_ingredient| %>
     <li>
       <h4> <%= one_ingredient.name %> </h4>
@@ -32,7 +34,7 @@
   <ul>
     <% @all_ingredients.each do |an_ingredient| %>
       <li>
-        <button data-ingredient-id="<%= an_ingredient.id %>">
+        <button class="js-add-ingredient" data-ingredient-id="<%= an_ingredient.id %>">
           <%= an_ingredient.name %>
         </buton>
       </li>

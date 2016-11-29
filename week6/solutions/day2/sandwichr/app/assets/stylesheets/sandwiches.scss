@@ -3,12 +3,15 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-ul {
+.sandwich-ingredients,
+.add-ingredients-wrapper ul {
   padding-left: 0;
   list-style: none;
 }
 
-li {
+
+.sandwich-ingredients li,
+.add-ingredients-wrapper li {
   display: inline-block;
 }
 
